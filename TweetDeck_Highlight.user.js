@@ -3,11 +3,11 @@
 // @namespace   http://taras.net
 // @description Highlights specified usernames within TweetDeck
 // @include     https://tweetdeck.twitter.com/*
-// @version     1
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 
-var users = new Array("tarasyoung", "amadigital");      // Usernames to highlight
+var users = new Array("bbcnews", "stephenfry");      // Usernames to highlight
 var update = 5;                                         // Update interval (in seconds - increase if it slows your browser)
 
 function Refresher()
@@ -31,12 +31,8 @@ function Refresher()
 
 }
 
-
 if ( window.location.hostname == "tweetdeck.twitter.com" )
 {
-    // Run on load items
-    firstTime();
-
     // Launch refresh timer
     setInterval( function(){ Refresher() }, update*1000);
 }
